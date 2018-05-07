@@ -13,6 +13,7 @@
 		F5D3753F20A0A9C000190D85 /* Find_my_pet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5D3753D20A0A9C000190D85 /* Find_my_pet.xcdatamodeld */; };
 		F5D3754120A0A9C200190D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D3754020A0A9C200190D85 /* Assets.xcassets */; };
 		F5D3754420A0A9C200190D85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D3754220A0A9C200190D85 /* LaunchScreen.storyboard */; };
+		F5D3754C20A0CAFC00190D85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D3754B20A0CAFC00190D85 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F5D3754020A0A9C200190D85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D3754320A0A9C200190D85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D3754520A0A9C200190D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D3754B20A0CAFC00190D85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F5D3754220A0A9C200190D85 /* LaunchScreen.storyboard */,
 				F5D3754520A0A9C200190D85 /* Info.plist */,
 				F5D3753D20A0A9C000190D85 /* Find_my_pet.xcdatamodeld */,
+				F5D3754B20A0CAFC00190D85 /* Images.xcassets */,
 			);
 			path = "Find my pet";
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D3754420A0A9C200190D85 /* LaunchScreen.storyboard in Resources */,
+				F5D3754C20A0CAFC00190D85 /* Images.xcassets in Resources */,
 				F5D3754120A0A9C200190D85 /* Assets.xcassets in Resources */,
 				F5D3753C20A0A9C000190D85 /* Main.storyboard in Resources */,
 			);
