@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501DF07FED1357428E1D6D58 /* Pods_Find_my_pet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E02B8549EB01D8C8A104375 /* Pods_Find_my_pet.framework */; };
+		F527474920A2CB6500127D19 /* LostDogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527474820A2CB6500127D19 /* LostDogCell.swift */; };
 		F5D3753720A0A9C000190D85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3753620A0A9C000190D85 /* AppDelegate.swift */; };
 		F5D3753920A0A9C000190D85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3753820A0A9C000190D85 /* ViewController.swift */; };
 		F5D3753C20A0A9C000190D85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D3753A20A0A9C000190D85 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E02B8549EB01D8C8A104375 /* Pods_Find_my_pet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_my_pet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		749DA690F946CDEB004BDCF7 /* Pods-Find my pet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find my pet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet.release.xcconfig"; sourceTree = "<group>"; };
+		C9BA1375D9560E7BEE31750C /* Pods-Find my pet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find my pet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet.debug.xcconfig"; sourceTree = "<group>"; };
+		F527474820A2CB6500127D19 /* LostDogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostDogCell.swift; sourceTree = "<group>"; };
 		F5D3753320A0A9C000190D85 /* Find my pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find my pet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D3753620A0A9C000190D85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D3753820A0A9C000190D85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501DF07FED1357428E1D6D58 /* Pods_Find_my_pet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18F79E7807FEE76035C1D38E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA1375D9560E7BEE31750C /* Pods-Find my pet.debug.xcconfig */,
+				749DA690F946CDEB004BDCF7 /* Pods-Find my pet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F5D3752A20A0A9C000190D85 = {
 			isa = PBXGroup;
 			children = (
 				F5D3753520A0A9C000190D85 /* Find my pet */,
 				F5D3753420A0A9C000190D85 /* Products */,
+				18F79E7807FEE76035C1D38E /* Pods */,
+				FEA1207C567BD29B85304ADB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +84,17 @@
 				F5D3754520A0A9C200190D85 /* Info.plist */,
 				F5D3753D20A0A9C000190D85 /* Find_my_pet.xcdatamodeld */,
 				F5D3754B20A0CAFC00190D85 /* Images.xcassets */,
+				F527474820A2CB6500127D19 /* LostDogCell.swift */,
 			);
 			path = "Find my pet";
+			sourceTree = "<group>";
+		};
+		FEA1207C567BD29B85304ADB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E02B8549EB01D8C8A104375 /* Pods_Find_my_pet.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D3754820A0A9C200190D85 /* Build configuration list for PBXNativeTarget "Find my pet" */;
 			buildPhases = (
+				92A0D083FF658485C948379E /* [CP] Check Pods Manifest.lock */,
 				F5D3752F20A0A9C000190D85 /* Sources */,
 				F5D3753020A0A9C000190D85 /* Frameworks */,
 				F5D3753120A0A9C000190D85 /* Resources */,
+				FF9948C0D49FA0D0D06CDFFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,11 +166,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92A0D083FF658485C948379E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Find my pet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9948C0D49FA0D0D06CDFFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyAvatar/SwiftyAvatar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAvatar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5D3752F20A0A9C000190D85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F527474920A2CB6500127D19 /* LostDogCell.swift in Sources */,
 				F5D3753920A0A9C000190D85 /* ViewController.swift in Sources */,
 				F5D3753720A0A9C000190D85 /* AppDelegate.swift in Sources */,
 				F5D3753F20A0A9C000190D85 /* Find_my_pet.xcdatamodeld in Sources */,
@@ -286,15 +357,13 @@
 		};
 		F5D3754920A0A9C200190D85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9BA1375D9560E7BEE31750C /* Pods-Find my pet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HRH4BVN79Q;
 				INFOPLIST_FILE = "Find my pet/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shibuyaxpress.Find-my-pet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -304,15 +373,13 @@
 		};
 		F5D3754A20A0A9C200190D85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749DA690F946CDEB004BDCF7 /* Pods-Find my pet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HRH4BVN79Q;
 				INFOPLIST_FILE = "Find my pet/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shibuyaxpress.Find-my-pet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
