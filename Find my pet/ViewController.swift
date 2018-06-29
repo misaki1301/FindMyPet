@@ -43,13 +43,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tableData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "LostDog") as! LostDogCell
-        cell.nameText.text=tableData[indexPath.row].name
-        cell.lastAddressText.text=tableData[indexPath.row].lastAddress
-        cell.raceText.text=tableData[indexPath.row].race
-        cell.titleText.text=tableData[indexPath.row].title
-        let url=URL(string: tableData[indexPath.row].image)
-        cell.imageDog?.kf.setImage(with: url)
+//        let cell=tableView.dequeueReusableCell(withIdentifier: "LostDog") as! LostDogCell
+//        cell.nameText.text=tableData[indexPath.row].name
+//        cell.lastAddressText.text=tableData[indexPath.row].lastAddress
+//        cell.raceText.text=tableData[indexPath.row].race
+//        cell.titleText.text=tableData[indexPath.row].title
+//        let url=URL(string: tableData[indexPath.row].image)
+//        cell.imageDog?.kf.setImage(with: url)
+//        return cell
+        let cell:UITableViewCell=UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "mycell")
+        cell.textLabel?.text = tableData[indexPath.row].name
         return cell
     }
     
