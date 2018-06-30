@@ -10,11 +10,8 @@ import UIKit
 
 class LostDogCell: UITableViewCell {
 
-    @IBOutlet weak var imageDog: UIImageView!
-    @IBOutlet weak var titleText: UILabel!
-    @IBOutlet weak var nameText: UILabel!
-    @IBOutlet weak var raceText: UILabel!
-    @IBOutlet weak var lastAddressText: UILabel!
+    
+    @IBOutlet weak var textViewName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

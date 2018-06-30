@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		501DF07FED1357428E1D6D58 /* Pods_Find_my_pet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E02B8549EB01D8C8A104375 /* Pods_Find_my_pet.framework */; };
 		F527474920A2CB6500127D19 /* LostDogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527474820A2CB6500127D19 /* LostDogCell.swift */; };
+		F535A41C20E71479009A4B8E /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535A41B20E71479009A4B8E /* Pet.swift */; };
+		F535A42020E7280B009A4B8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535A41F20E7280B009A4B8E /* User.swift */; };
+		F535A42220E732F7009A4B8E /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535A42120E732F7009A4B8E /* Case.swift */; };
+		F535A42720E73B4E009A4B8E /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535A42620E73B4E009A4B8E /* Breed.swift */; };
 		F5D3753720A0A9C000190D85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3753620A0A9C000190D85 /* AppDelegate.swift */; };
 		F5D3753920A0A9C000190D85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3753820A0A9C000190D85 /* ViewController.swift */; };
 		F5D3753C20A0A9C000190D85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D3753A20A0A9C000190D85 /* Main.storyboard */; };
@@ -16,6 +20,7 @@
 		F5D3754120A0A9C200190D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D3754020A0A9C200190D85 /* Assets.xcassets */; };
 		F5D3754420A0A9C200190D85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D3754220A0A9C200190D85 /* LaunchScreen.storyboard */; };
 		F5D3754C20A0CAFC00190D85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D3754B20A0CAFC00190D85 /* Images.xcassets */; };
+		F5F4A32720E771E500D2F957 /* LostDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F4A32620E771E500D2F957 /* LostDog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,10 @@
 		749DA690F946CDEB004BDCF7 /* Pods-Find my pet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find my pet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet.release.xcconfig"; sourceTree = "<group>"; };
 		C9BA1375D9560E7BEE31750C /* Pods-Find my pet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find my pet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet.debug.xcconfig"; sourceTree = "<group>"; };
 		F527474820A2CB6500127D19 /* LostDogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostDogCell.swift; sourceTree = "<group>"; };
+		F535A41B20E71479009A4B8E /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		F535A41F20E7280B009A4B8E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F535A42120E732F7009A4B8E /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		F535A42620E73B4E009A4B8E /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		F5D3753320A0A9C000190D85 /* Find my pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find my pet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D3753620A0A9C000190D85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5D3753820A0A9C000190D85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +41,7 @@
 		F5D3754320A0A9C200190D85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D3754520A0A9C200190D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D3754B20A0CAFC00190D85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F5F4A32620E771E500D2F957 /* LostDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostDog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F535A41A20E7145D009A4B8E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F535A41B20E71479009A4B8E /* Pet.swift */,
+				F535A41F20E7280B009A4B8E /* User.swift */,
+				F535A42120E732F7009A4B8E /* Case.swift */,
+				F535A42620E73B4E009A4B8E /* Breed.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F535A41D20E72714009A4B8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5D3753820A0A9C000190D85 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F535A41E20E72728009A4B8E /* CustomLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				F527474820A2CB6500127D19 /* LostDogCell.swift */,
+			);
+			path = CustomLayouts;
+			sourceTree = "<group>";
+		};
+		F535A42320E73560009A4B8E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F5D3752A20A0A9C000190D85 = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +120,18 @@
 		F5D3753520A0A9C000190D85 /* Find my pet */ = {
 			isa = PBXGroup;
 			children = (
+				F535A42320E73560009A4B8E /* Services */,
+				F535A41E20E72728009A4B8E /* CustomLayouts */,
+				F535A41D20E72714009A4B8E /* Controllers */,
+				F535A41A20E7145D009A4B8E /* Models */,
 				F5D3753620A0A9C000190D85 /* AppDelegate.swift */,
-				F5D3753820A0A9C000190D85 /* ViewController.swift */,
 				F5D3753A20A0A9C000190D85 /* Main.storyboard */,
 				F5D3754020A0A9C200190D85 /* Assets.xcassets */,
 				F5D3754220A0A9C200190D85 /* LaunchScreen.storyboard */,
 				F5D3754520A0A9C200190D85 /* Info.plist */,
 				F5D3753D20A0A9C000190D85 /* Find_my_pet.xcdatamodeld */,
 				F5D3754B20A0CAFC00190D85 /* Images.xcassets */,
-				F527474820A2CB6500127D19 /* LostDogCell.swift */,
+				F5F4A32620E771E500D2F957 /* LostDog.swift */,
 			);
 			path = "Find my pet";
 			sourceTree = "<group>";
@@ -192,13 +239,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Find my pet/Pods-Find my pet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyAvatar/SwiftyAvatar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAvatar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -212,10 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F535A42720E73B4E009A4B8E /* Breed.swift in Sources */,
+				F535A41C20E71479009A4B8E /* Pet.swift in Sources */,
 				F527474920A2CB6500127D19 /* LostDogCell.swift in Sources */,
+				F535A42020E7280B009A4B8E /* User.swift in Sources */,
 				F5D3753920A0A9C000190D85 /* ViewController.swift in Sources */,
 				F5D3753720A0A9C000190D85 /* AppDelegate.swift in Sources */,
+				F535A42220E732F7009A4B8E /* Case.swift in Sources */,
 				F5D3753F20A0A9C000190D85 /* Find_my_pet.xcdatamodeld in Sources */,
+				F5F4A32720E771E500D2F957 /* LostDog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
