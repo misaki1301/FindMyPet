@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FIndViewController: UIViewController {
-
+class FindViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView:UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavBar()
@@ -25,5 +25,15 @@ class FIndViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController=searchController
         navigationItem.hidesSearchBarWhenScrolling=false
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for:indexPath) as! FoundDog
+        return cell
     }
 }

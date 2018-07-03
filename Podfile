@@ -9,4 +9,5 @@ target 'Find my pet' do
 pod 'Kingfisher', '~> 4.0'
 pod 'Alamofire', '~> 4.7'
 pod 'SwiftyJSON', '~> 4.0'
+pod 'SwiftyAvatar', '~> 1.1'
 end

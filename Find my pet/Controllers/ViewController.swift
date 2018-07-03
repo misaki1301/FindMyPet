@@ -10,9 +10,10 @@ import UIKit
 import Kingfisher
 import Alamofire
 import CoreLocation
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let API_BASE_URL:String="http://34.221.160.8:1414"
+    let API_BASE_URL:String="http://34.218.48.122:1414"
     @IBOutlet weak var tableView: UITableView!
     typealias Reports = [Report]
     var tableData:[Report] = []
@@ -38,7 +39,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         pet_id: (Array[i] as AnyObject).value(forKey: "pet_id") as! String
                     ))
                 }
-                print("elementos:\(self.tableData[1].latitude)")
+                //print("elementos:\(self.tableData[1].latitude)")
+                //query for the image view
                 self.tableView?.reloadData()
             }
                 //self.tableView?.reloadData()
@@ -55,13 +57,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "detallePerdidoSegue", sender: nil)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LostDog
         let report:Report
         report=tableData[indexPath.row]
         cell.textViewTitle.text=report.title
         cell.textViewDate.text=report.date
+        //loading an image
+        Alamofire.request(API_BASE_URL+"/pets?_id=\(tableData[indexPath.row].pet_id!)").responseJSON(completionHandler: {(response:DataResponse) in
+                switch(response.result){
+                    case .success(let value):
+                        let json = JSON(value)
+                        let imagen=json["image"].stringValue
+                        let url = URL(string: imagen)
+                        cell.imageDog.kf.setImage(with: url)
+                        break
+                    case .failure(let error):
+                        print(error)
+                        break
+            }
+            
+            })
+        //getting address with geocoder
         let lat:Double = (report.latitude! as NSString).doubleValue
         let lon:Double = (report.longitude! as NSString).doubleValue
         let location = CLLocation(latitude:lat, longitude:lon)
@@ -95,11 +115,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if pm.postalCode != nil{
                     addressString = addressString + pm.postalCode! + ", "
                 }
-                print(addressString)
+                //print(addressString)
                 cell.textViewAddress.text=addressString
             }
         })
         return cell
+    }
+    
+    @IBAction func btnNewReportTapped(_ sender: Any) {
+        performSegue(withIdentifier: "mapaSegue", sender: nil)
     }
     
     func setUpNavBar(){
