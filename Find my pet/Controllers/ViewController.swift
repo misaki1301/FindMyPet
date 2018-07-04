@@ -13,7 +13,7 @@ import CoreLocation
 import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let API_BASE_URL:String="http://34.218.48.122:1414"
+    let API_BASE_URL:String="http://34.220.155.206:1414"
     @IBOutlet weak var tableView: UITableView!
     typealias Reports = [Report]
     var tableData:[Report] = []
@@ -58,7 +58,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tableData.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "detallePerdidoSegue", sender: nil)
+        let report_id:String=tableData[indexPath.row]._id
+        self.performSegue(withIdentifier: "detallePerdidoSegue", sender: tableData[indexPath.row])
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LostDog
@@ -67,7 +68,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textViewTitle.text=report.title
         cell.textViewDate.text=report.date
         //loading an image
-        Alamofire.request(API_BASE_URL+"/pets?_id=\(tableData[indexPath.row].pet_id!)").responseJSON(completionHandler: {(response:DataResponse) in
+        Alamofire.request(API_BASE_URL+"/pets?_id=\(tableData[indexPath.row].pet_id)").responseJSON(completionHandler: {(response:DataResponse) in
                 switch(response.result){
                     case .success(let value):
                         let json = JSON(value)
@@ -82,8 +83,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             })
         //getting address with geocoder
-        let lat:Double = (report.latitude! as NSString).doubleValue
-        let lon:Double = (report.longitude! as NSString).doubleValue
+        let lat:Double = (report.latitude as NSString).doubleValue
+        let lon:Double = (report.longitude as NSString).doubleValue
         let location = CLLocation(latitude:lat, longitude:lon)
         geocoder.reverseGeocodeLocation(location, completionHandler: {(placemarks,error) in
             if(error != nil){
@@ -131,6 +132,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController=searchController
         navigationItem.hidesSearchBarWhenScrolling=false
+    }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "detallePerdidoSegue"{
+            let siguienteVC=segue.destination as! DetailLostViewController
+            siguienteVC.report=sender as! Report
+        }
     }
 
 }

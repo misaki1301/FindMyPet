@@ -24,6 +24,13 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         fillUserData()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        print("actualizaré la data del usuario")
+        fillUserData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //print("actualizando data")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,7 +38,10 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 0
+    }
+     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Mis Mascotas"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +58,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         let url = URL(string: preferences.string(forKey: "image")!)
         imageViewProfile.kf.setImage(with: url)
         print("url de imagen \(url!)")
+        print("user_id del dueño \(preferences.string(forKey: "user_id")!)")
         
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 
 class Owners :Codable{
-    var pets:[String]
+    var pets:[String]=[]
     var _id:String?=""
     var name:String?=""
     var lastname:String?=""
@@ -18,7 +18,9 @@ class Owners :Codable{
     var address:String?=""
     var image:String?=""
     var user_id:String?=""
-    
+    init() {
+        
+    }
     enum CodingKeys: String, CodingKey{
         case pets
         case _id

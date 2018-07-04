@@ -9,16 +9,12 @@
 import Foundation
 
 class User{
-    var _id:String?{
-        get{
-            return self._id
-        }
-        set(_id){
-            self._id=_id
-        }
+    var _id:String=""
+    var username:String=""
+    var password:String=""
+    init(){
+        
     }
-    var username:String?
-    var password:String?
     
     init(user:User) {
         self._id=user._id

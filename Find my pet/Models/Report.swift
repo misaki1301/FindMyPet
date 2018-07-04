@@ -9,16 +9,17 @@
 import Foundation
 
 class Report{
-    var _id:String?
-    var title:String?
-    var latitude:String?
-    var longitude:String?
-    var date:String?
-    var isLost:Bool
-    var description:String?
-    var user_id:String?
-    var pet_id:String?
+    var _id:String=""
+    var title:String=""
+    var latitude:String=""
+    var longitude:String=""
+    var date:String=""
+    var isLost:Bool=false
+    var description:String=""
+    var user_id:String=""
+    var pet_id:String=""
     
+    init() {}
     init(id:String,title:String,latitude:String,longitude:String,date:String,isLost:Bool,description:String,user_id:String,pet_id:String) {
         self._id=id
         self.title=title

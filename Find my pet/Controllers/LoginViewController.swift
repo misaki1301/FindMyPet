@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
-    let API_BASE_URL:String="http://34.218.48.122:1414/login"
+    let API_BASE_URL:String="http://34.220.155.206:1414/login"
     
     @IBOutlet weak var textViewUsename: UITextField!
     @IBOutlet weak var textViewPassword: UITextField!
@@ -28,6 +28,9 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func RegisterTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "createAccountSegue", sender: nil)
+    }
     @IBAction func LoginTapped(_ sender: Any) {
         let parameters = [
             "username":textViewUsename.text,
@@ -38,18 +41,16 @@ class LoginViewController: UIViewController {
                 switch(response.result){
                     case .success(let value):
                         let json = JSON(value)
-                        //print(type(of: value))
-                        //let json=try? JSON(data:value as! Data)
                         print("login successfull \(json["name"].stringValue)")
-                        var _id=json["_id"].stringValue
-                        var name=json["name"].stringValue
-                        var address=json["address"].stringValue
-                        var birthdate=json["birthdate"].stringValue
-                        var lastname=json["lastname"].stringValue
-                        var telephone=json["telephone"].stringValue
-                        var pets=[json["pets"].stringValue]
-                        var user_id=json["user_id"].stringValue
-                        var image=json["image"].stringValue
+                        let _id=json["_id"].stringValue
+                        let name=json["name"].stringValue
+                        let address=json["address"].stringValue
+                        let birthdate=json["birthdate"].stringValue
+                        let lastname=json["lastname"].stringValue
+                        let telephone=json["telephone"].stringValue
+                        let pets=[json["pets"].stringValue]
+                        let user_id=json["user_id"].stringValue
+                        let image=json["image"].stringValue
                         print(lastname)
                         let owner=Owners(id: _id,pets: pets,name: name,lastname: lastname,birthdate: birthdate,telephone: telephone,address: address,image: image,user_id: user_id)
                         self.saveUserInfo(item: owner)
@@ -84,6 +85,9 @@ class LoginViewController: UIViewController {
         }else{
             print("Preferences has been saved")
         }
+    }
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        
     }
 }
 extension UIViewController {
